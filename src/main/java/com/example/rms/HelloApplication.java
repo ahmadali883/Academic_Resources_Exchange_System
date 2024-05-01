@@ -20,3 +20,34 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+
+//import javafx.application.Application;
+//import javafx.stage.FileChooser;
+//import javafx.stage.Stage;
+//import java.io.File;
+//
+//public class HelloApplication extends Application {
+//
+//    @Override
+//    public void start(Stage primaryStage) {
+//        // Create a FileChooser
+//        FileChooser fileChooser = new FileChooser();
+//
+//        // Set title for FileChooser dialog
+//        fileChooser.setTitle("Select File");
+//
+//        // Show open dialog
+//        File selectedFile = fileChooser.showOpenDialog(primaryStage);
+//
+//        // Check if a file was selected
+//        if (selectedFile != null) {
+//            System.out.println("Selected File: " + selectedFile.getAbsolutePath());
+//        } else {
+//            System.out.println("No file selected.");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
+//}

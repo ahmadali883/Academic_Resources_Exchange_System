@@ -20,7 +20,7 @@
                   <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                </font>
             </Label>
-            <Label layoutX="741.0" layoutY="375.0" text="CNIC">
+            <Label layoutX="741.0" layoutY="375.0" text="Email">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                </font>
@@ -32,7 +32,7 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></TextField>
-            <TextField fx:id="cnic" layoutX="847.0" layoutY="371.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter CNIC">
+            <TextField fx:id="email" layoutX="847.0" layoutY="371.0" prefHeight="40.0" prefWidth="230.0" promptText="Your University Email">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -54,7 +54,7 @@
                   <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                </font>
             </Label>
-              <TextField fx:id="address" layoutX="847.0" layoutY="429.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
+              <TextField fx:id="password" layoutX="847.0" layoutY="429.0" prefHeight="40.0" prefWidth="230.0" promptText="Your password">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -89,6 +89,11 @@
                   <Font name="Berlin Sans FB Demi Bold" size="20.0" />
                </font>
             </Button>
+            <Label fx:id="Invalid_Email" layoutX="973.0" layoutY="504.0" prefHeight="36.0" prefWidth="213.0">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </right>

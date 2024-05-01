@@ -16,12 +16,20 @@
    <right>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to bottom,  #B4E4F6, #3498db) linear-gradient(to bottom,  #B4E4F6, #3498db);" BorderPane.alignment="CENTER">
          <children>
+<<<<<<< HEAD
             <Label layoutX="734.0" layoutY="309.0" text="CNIC">
+=======
+            <Label layoutX="734.0" layoutY="309.0" text="Email ">
+>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                </font>
             </Label>
+<<<<<<< HEAD
             <TextField fx:id="cnic" layoutX="840.0" layoutY="305.0" onKeyReleased="#validateCnic" prefHeight="40.0" prefWidth="230.0" promptText="Enter CNIC">
+=======
+            <TextField fx:id="email" layoutX="840.0" layoutY="305.0" onKeyReleased="#validateCnic" prefHeight="40.0" prefWidth="230.0" promptText="Enter Email">
+>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -29,6 +37,7 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
+<<<<<<< HEAD
             <Button fx:id="loginButton" disable="true" layoutX="824.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToCustomerMenu" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="20.0" />
@@ -37,12 +46,18 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+=======
+>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
             <Label layoutX="681.0" layoutY="367.0" text="Password">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                </font>
             </Label>
+<<<<<<< HEAD
             <TextField layoutX="840.0" layoutY="363.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
+=======
+            <TextField fx:id="Password" layoutX="840.0" layoutY="363.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
+>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -77,6 +92,17 @@
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
             </Hyperlink>
+<<<<<<< HEAD
+=======
+            <Button layoutX="813.0" layoutY="430.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToUserMenu" prefHeight="57.0" prefWidth="145.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
          </children>
       </AnchorPane>
    </right>

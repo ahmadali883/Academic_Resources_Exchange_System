@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 //import BusinessLayer.Booking;
 //import BusinessLayer.Registration;
@@ -19,6 +22,16 @@ import javafx.scene.control.Alert.AlertType;
 
 public class DBHandler {
 
+    // JDBC URL, username, and password of MySQL server
+    private static final String URL = "jdbc:mysql://localhost:3306/Resource_management_system";
+    private static final String USER = "root";
+    private static final String PASSWORD = "1216";
+
+    // JDBC variables for opening, closing, and managing connection
+    private static Connection connection;
+    private static PreparedStatement preparedStatement;
+    private static ResultSet resultSet;
+
     private static DBHandler instance = null;
 
     private DBHandler() {
@@ -31,55 +44,105 @@ public class DBHandler {
         return instance;
     }
 
-        // JDBC URL, username, and password of MySQL server
-        private static final String URL = "jdbc:mysql://localhost:3306/Resource_management_system";
-        private static final String USER = "root";
-        private static final String PASSWORD = "1216";
 
-        // JDBC variables for opening, closing and managing connection
-        private static Connection connection;
+        public static boolean isValidEmail(String email) {
+        // Regular expression to match the given email format
+        String regex = "[ipkfIPKF]\\d{6}@nu\\.edu\\.pk";
 
-        // Establishing Database Connection
-        public static Connection getConnection() throws SQLException {
-            if (connection == null || connection.isClosed()) {
-                connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            }
-            return connection;
-        }
+        // Compile the regular expression
+        Pattern pattern = Pattern.compile(regex);
 
-        // Inserting data into users table
-        public static void insertUserData(String address, String cnic, String fullName, String phoneNum) {
-            Connection conn = null;
-            PreparedStatement stmt = null;
-            try {
-                conn = getConnection();
-                String sql = "INSERT INTO users (address, cnic, fullName, phoneNum) VALUES (?, ?, ?, ?)";
-                stmt = conn.prepareStatement(sql);
-                stmt.setString(1, address);
-                stmt.setString(2, cnic);
-                stmt.setString(3, fullName);
-                stmt.setString(4, phoneNum);
-                int rowsInserted = stmt.executeUpdate();
-                if (rowsInserted > 0) {
-                    System.out.println("A new user was inserted successfully!");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } finally {
+        // Match the email address with the pattern
+        Matcher matcher = pattern.matcher(email);
+
+        // Return true if the email matches the pattern, false otherwise
+        return matcher.matches();
+    }
+        // Function to insert user data into the database
+        public static void insertUser(String name, String phoneNumber, String emailAddress, String password) {
                 try {
-                    if (stmt != null) {
-                        stmt.close();
-                    }
-                    if (conn != null) {
-                        conn.close();
-                    }
+                    // Open a connection
+                    connection = DriverManager.getConnection(URL, USER, PASSWORD);
+
+                    // SQL query to insert user data
+                    String sql = "INSERT INTO users (name, phone_number, email_address, password) VALUES (?, ?, ?, ?)";
+
+                    // Create a prepared statement
+                    preparedStatement = connection.prepareStatement(sql);
+
+                    // Set parameters for the prepared statement
+                    preparedStatement.setString(1, name);
+                    preparedStatement.setString(2, phoneNumber);
+                    preparedStatement.setString(3, emailAddress);
+                    preparedStatement.setString(4, password);
+
+                    // Execute the query
+                    preparedStatement.executeUpdate();
+
+                    System.out.println("User data inserted successfully!");
                 } catch (SQLException e) {
                     e.printStackTrace();
+                } finally {
+                    // Close the prepared statement and connection
+                    try {
+                        if (preparedStatement != null)
+                            preparedStatement.close();
+                        if (connection != null)
+                            connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
+
         }
 
 
+
+
+    // Function to check if user exists with specific email address and password
+    public static boolean checkUser(String emailAddress, String password) {
+        boolean userExists = false;
+        try {
+            // Open a connection
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+
+            // SQL query to check if user exists
+            String sql = "SELECT COUNT(*) FROM users WHERE email_address = ? AND password = ?";
+
+            // Create a prepared statement
+            preparedStatement = connection.prepareStatement(sql);
+
+            // Set parameters for the prepared statement
+            preparedStatement.setString(1, emailAddress);
+            preparedStatement.setString(2, password);
+
+            // Execute the query
+            resultSet = preparedStatement.executeQuery();
+
+            // Check if any rows returned
+            if (resultSet.next()) {
+                int count = resultSet.getInt(1);
+                if (count > 0) {
+                    userExists = true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the result set, prepared statement, and connection
+            try {
+                if (resultSet != null)
+                    resultSet.close();
+                if (preparedStatement != null)
+                    preparedStatement.close();
+                if (connection != null)
+                    connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return userExists;
+    }
 
 
 }
