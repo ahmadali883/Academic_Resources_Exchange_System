@@ -58,15 +58,15 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-<<<<<<< HEAD
-=======
+<!--<<<<<<< HEAD-->
+<!--=======-->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+<!--&gt;>>>>>> f37d637 (Initial Commit By Ahmad Ali)-->
     </dependencies>
 
     <build>

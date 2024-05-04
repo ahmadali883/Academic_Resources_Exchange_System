@@ -13,97 +13,71 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rms.CustomerLogin_Controller">
-   <right>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to bottom,  #B4E4F6, #3498db) linear-gradient(to bottom,  #B4E4F6, #3498db);" BorderPane.alignment="CENTER">
-         <children>
-<<<<<<< HEAD
-            <Label layoutX="734.0" layoutY="309.0" text="CNIC">
-=======
-            <Label layoutX="734.0" layoutY="309.0" text="Email ">
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="28.0" />
-               </font>
-            </Label>
-<<<<<<< HEAD
-            <TextField fx:id="cnic" layoutX="840.0" layoutY="305.0" onKeyReleased="#validateCnic" prefHeight="40.0" prefWidth="230.0" promptText="Enter CNIC">
-=======
-            <TextField fx:id="email" layoutX="840.0" layoutY="305.0" onKeyReleased="#validateCnic" prefHeight="40.0" prefWidth="230.0" promptText="Enter Email">
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-               <font>
-                  <Font name="Berlin Sans FB" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-<<<<<<< HEAD
-            <Button fx:id="loginButton" disable="true" layoutX="824.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToCustomerMenu" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Login" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-=======
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-            <Label layoutX="681.0" layoutY="367.0" text="Password">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="28.0" />
-               </font>
-            </Label>
-<<<<<<< HEAD
-            <TextField layoutX="840.0" layoutY="363.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
-=======
-            <TextField fx:id="Password" layoutX="840.0" layoutY="363.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-               <font>
-                  <Font name="Berlin Sans FB" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Pane prefHeight="680.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080);">
-               <children>
-                  <Label layoutX="86.0" layoutY="317.0" text="Customer Login 👨" textFill="WHITE">
-                     <font>
-                        <Font name="Berlin Sans FB Demi Bold" size="40.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <ImageView fitHeight="252.0" fitWidth="382.0" layoutX="673.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:/C:/Users/Hp/Downloads/Train%20Reservation%20System/abc.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="1062.0" layoutY="609.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToMainPage" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Back" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Hyperlink layoutX="965.0" layoutY="444.0" onAction="#RegisterCustomer1" text="New User?" textAlignment="CENTER" textFill="#940000" underline="true">
-               <font>
-                  <Font name="Berlin Sans FB" size="18.0" />
-               </font>
-            </Hyperlink>
-<<<<<<< HEAD
-=======
-            <Button layoutX="813.0" layoutY="430.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToUserMenu" prefHeight="57.0" prefWidth="145.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Login" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-         </children>
-      </AnchorPane>
-   </right>
+    <right>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to bottom, #B4E4F6, #3498db) linear-gradient(to bottom, #B4E4F6, #3498db);" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="734.0" layoutY="309.0" text="Email">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="email" layoutX="840.0" layoutY="305.0" onKeyReleased="#validateCnic" prefHeight="40.0" prefWidth="230.0" promptText="Enter Email">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <Label layoutX="681.0" layoutY="367.0" text="Password">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Password" layoutX="840.0" layoutY="363.0" prefHeight="40.0" prefWidth="230.0" promptText="Enter your password">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <Pane prefHeight="680.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080);">
+                    <children>
+                        <Label layoutX="86.0" layoutY="317.0" text="Customer Login 👨" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <ImageView fitHeight="252.0" fitWidth="382.0" layoutX="673.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:/C:/Users/Hp/Downloads/Train%20Reservation%20System/abc.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="1062.0" layoutY="609.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToMainPage" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Back" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Hyperlink layoutX="965.0" layoutY="444.0" onAction="#RegisterCustomer1" text="New User?" textAlignment="CENTER" textFill="#940000" underline="true">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Button layoutX="813.0" layoutY="430.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#GoToUserMenu" prefHeight="57.0" prefWidth="145.0" style="-fx-background-color: linear-gradient(to bottom, #010050, #002080); -fx-border-color: white; -fx-border-radius: 13; -fx-background-radius: 15; -fx-border-width: 2;" text="Login" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
 </BorderPane>

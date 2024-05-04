@@ -6,10 +6,10 @@ package com.example.rms;
 
 import java.io.IOException;
 import java.net.URL;
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 import java.util.Objects;
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+//>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,92 +30,92 @@ public class CustomerLogin_Controller {
     @FXML // URL location of the FXML file that was given to the FXMLLoader
     private URL location;
 
-<<<<<<< HEAD
+    //<<<<<<< HEAD
     @FXML // fx:id="cnic"
     private TextField cnic; // Value injected by FXMLLoader
-=======
+    //=======
     @FXML // fx:id="Password"
     private TextField Password; // Value injected by FXMLLoader
 
     @FXML // fx:id="email"
     private TextField email; // Value injected by FXMLLoader
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+//>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
 
     @FXML // fx:id="loginButton"
     private Button loginButton; // Value injected by FXMLLoader
 
-<<<<<<< HEAD
+    //<<<<<<< HEAD
     @FXML
     void GoToCustomerMenu(ActionEvent event) {
 
     }
 
-    @FXML
-    void GoToMainPage(ActionEvent event) {
-
-=======
 
 
-    public String getPass(){
-        return Password.getText();
-    }
-    public String getEmail(){
-        return email.getText();
-    }
+//=======
 
 
-    @FXML
-    void GoToUserMenu(ActionEvent event) throws IOException {
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!! ");
+        public String getPass () {
+            return Password.getText();
+        }
+        public String getEmail () {
+            return email.getText();
+        }
+
+
+        @FXML
+        void GoToUserMenu (ActionEvent event) throws IOException {
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!! ");
 //        if(DBHandler.checkUser(getEmail(),getPass())){
             System.out.println("LOGGED IN SUCCESSFULLY");
             BorderPane root = (BorderPane) FXMLLoader.load(this.getClass().getResource("studentMenu.fxml"));
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
 
-//        }
+        }
 //        else{
 //            System.out.println("Fail to login");
 //
 //        }
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+////>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+//        }
+
+        @FXML
+        void RegisterCustomer1 (ActionEvent event) throws IOException {
+            BorderPane root = (BorderPane) FXMLLoader.load(this.getClass().getResource("Register.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+//<<<<<<< HEAD
+//=======
+
+        @FXML
+        void GoToMainPage (ActionEvent event){
+
+        }
+
+//>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+        @FXML
+        void validateCnic (KeyEvent event){
+
+        }
+
+        @FXML // This method is called by the FXMLLoader when initialization is complete
+        void initialize () {
+//<<<<<<< HEAD
+            assert cnic != null : "fx:id=\"cnic\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
+//=======
+            assert Password != null : "fx:id=\"Password\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
+            assert email != null : "fx:id=\"email\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
+//>>>>>>> f37d637 (Initial Commit By Ahmad Ali)
+            assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
+
+        }
+
+
     }
-
-    @FXML
-    void RegisterCustomer1(ActionEvent event) throws IOException {
-        BorderPane root = (BorderPane) FXMLLoader.load(this.getClass().getResource("Register.fxml"));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-<<<<<<< HEAD
-=======
-
-    @FXML
-    void GoToMainPage(ActionEvent event) {
-
-    }
-
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-    @FXML
-    void validateCnic(KeyEvent event) {
-
-    }
-
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
-<<<<<<< HEAD
-        assert cnic != null : "fx:id=\"cnic\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
-=======
-        assert Password != null : "fx:id=\"Password\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
-        assert email != null : "fx:id=\"email\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
->>>>>>> f37d637 (Initial Commit By Ahmad Ali)
-        assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'CustomerLogin.fxml'.";
-
-    }
-
-}
